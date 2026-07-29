@@ -14,7 +14,7 @@ function Feed() {
         fetchNextPage,      // 다음 페이지 가져오는 함수
         hasNextPage,        // 다음 페이지 있는지 (true/false)
         isFetchingNextPage  // 다음 페이지 로딩 중
-    } = usePosts(1)
+    } = usePosts()
 
     // IntersectionObserver가 감시할 DOM 요소
     const observerRef = useRef<HTMLDivElement>(null)
