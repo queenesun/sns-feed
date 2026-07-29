@@ -35,7 +35,7 @@ export async function createPost(content: string, image?: string) {
 }
 
 export async function likePost(postId: number) {
-    const response = await fetch('/api/posts/${postId}/like', {
+    const response = await fetch(`/api/posts/${postId}/like`, {
         method: 'POST'
     })
 
