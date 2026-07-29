@@ -1,0 +1,139 @@
+.section {
+    border-top: 1px solid #e4e6eb;
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+.toggleBtn {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+    width: 100%;
+    text-align: left;
+}
+
+.toggleBtn:hover {
+    background: #f2f3f5;
+}
+
+.content {
+    margin-top: 12px;
+}
+
+.loading {
+    text-align: center;
+    color: #65676b;
+    padding: 20px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.comment {
+    display: flex;
+    gap: 10px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.commentBody {
+    flex: 1;
+    background: #f0f2f5;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.time {
+    font-size: 0.8rem;
+    color: #65676b;
+}
+
+.commentContent {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    gap: 8px;
+}
+
+.input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ccd0d5;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+.submitBtn {
+    padding: 10px 20px;
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: #166fe5;
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+body.dark .section {
+    border-top-color: #3a3b3c;
+}
+
+body.dark .toggleBtn:hover {
+    background: #3a3b3c;
+}
+
+body.dark .commentBody {
+    background: #3a3b3c;
+}
+
+body.dark .time {
+    color: #b0b3b8;
+}
+
+body.dark .input {
+    background: #3a3b3c;
+    border-color: #3a3b3c;
+    color: #e4e6eb;
+}
