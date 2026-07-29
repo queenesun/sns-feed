@@ -7,8 +7,6 @@ React Query의 낙관적 업데이트(Optimistic Update) 예제
 -> UI 선반영(서버 결과와 상관 X) 
 -> 서버 요청 
 -> 결과 처리 (성공 시 그대로 유지하거나 서버 데이터로 맞춤 / 실패 시 롤백 후 에러 알림)
-
-
 */
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
