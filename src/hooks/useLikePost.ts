@@ -13,12 +13,18 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { likePost } from '../api/posts';
 import type { Post } from '../types';
 
+// 좋아요 기능 전용 커스텀 훅
 export function useLikePost() {
+    // React Query 캐시에 접근하기 위한 객체
     const queryClient = useQueryClient();
 
+    // mutation 생성 - 데이터 변경 (POST, PUT, DELETE 등) 담당
     return useMutation({
+        // 실제 서버 API 호출 함수 likePost(postId)
         mutationFn: likePost,
 
+        // async: 프로그램이 작업 완료를 기다리지 않고 다른 일을 먼저 하도록 만드는 비동기 코드
+        // 서버 요청 직전에 실행 -> 낙관적 업데이트 처리
         onMutate: async (postId) => {
             // 이전 쿼리 취소
             await queryClient.cancelQueries({ queryKey: ['posts'] })
