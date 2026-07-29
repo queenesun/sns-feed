@@ -1,5 +1,6 @@
 import type { Post } from '../../types';
 import LikeButton from '../LikeButton/LikeButton';
+import CommentSection from '../CommentSection/CommentSection';
 import styles from './PostCard.module.css';
 
 interface PostCardProps {
@@ -51,6 +52,8 @@ function PostCard({ post }: PostCardProps) {
           💬 {post.commentCount}
         </button>
       </div>
+      
+      <CommentSection postId={post.id} />
     </article>
   );
 }
