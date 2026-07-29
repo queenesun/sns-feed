@@ -1,0 +1,82 @@
+.formContainer {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd0d5;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+.textarea::placeholder {
+    color: #65676b;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitBtn {
+    padding: 10px 24px;
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: #166fe5;
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+body.dark .formContainer {
+    background: #242526;
+}
+
+body.dark .textarea {
+    background: #3a3b3c;
+    border-color: #3a3b3c;
+    color: #e4e6eb;
+}
+
+body.dark .textarea::placeholder {
+    color: #b0b3b8;
+}
+
+body.dark .textarea:focus {
+    border-color: #2d88ff;
+}
