@@ -1,0 +1,30 @@
+.button {
+    background: none;
+    border: none;
+
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.button:hover:not(:disabled) {
+    background: #f2f3f5;
+}
+
+.button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.liked {
+    color: #e41e3f;
+}
+
+body.dark .button:hover:not(:disabled) {
+    background: #3a3b3c;
+}
